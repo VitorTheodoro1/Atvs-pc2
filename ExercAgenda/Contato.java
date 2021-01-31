@@ -1,12 +1,6 @@
 package ExercAgenda;
 
 
-
-
-
-
-
-
 public class Contato {
 
     private String nome;
