@@ -1,7 +1,7 @@
 package ExercAgenda;
 
 /**
- * tyyt
+ * 
  * 
  * @author: Vitor Theodoro
  */
