@@ -47,23 +47,11 @@ public class baralho {
         {
 
             aux[i] = baralho[x];
-            //if(baralho[i] != null){
-             //   aux[i] = baralho[i];
-            //    baralho[i] = null;
-        
-          //  }
           x++;
         }
         return aux;
 
     }
-   // public void percorrerBaralho(){
-        //Iterator<carta> it = baralho.iterator();
-       // while(it.hasNext()){
-      //      System.out.println(it.next());
-      //  }
-        
-   // }
-
+   
 
 }
