@@ -1,17 +1,17 @@
 package ExercCartas;
 
 
-public class Cartas {
+public class cartas {
 
     private int VALOR;
     private String NAIPE;
 
-    public Cartas(){
+    public cartas(){
         VALOR = 0;
         NAIPE = "";
     }
 
-    public Cartas(int valor, String naipe){
+    public cartas(int valor, String naipe){
         this.VALOR = valor;
         this.NAIPE = naipe;
     }
@@ -32,7 +32,7 @@ public class Cartas {
         return NAIPE;
     }
 
-    public int comparaValor(Cartas carta){
+    public int comparaValor(cartas carta){
 
         if(this.VALOR>carta.getValor())
         {
@@ -46,7 +46,7 @@ public class Cartas {
         }
     }
 
-    public int comparaNaipe(Cartas carta)
+    public int comparaNaipe(cartas carta)
     {
         if(this.NAIPE.equals(carta.getNaipe()))
         {
@@ -56,21 +56,6 @@ public class Cartas {
         return 0;
     }
 
-        public void displayMessageA(Cartas carta){
-            System.out.printf("o resultado e %d ",comparaValor(carta));
-        }
+    }
 
-
-
-        
-        public void displayMessageB(Cartas carta){
-
-            if(comparaNaipe(carta)==1)
-            {
-                System.out.printf("\no naipe e igual ");
-            }
-            else
-            System.out.printf("\no naipe e diferente ",comparaValor(carta));
-        }
-
-}
+       
