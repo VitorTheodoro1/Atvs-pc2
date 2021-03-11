@@ -1,53 +1,49 @@
 package ExercAgenda;
 
-
 import java.util.ArrayList;
 
-public class Agenda {
+public class agenda {
 
-    private static ArrayList<Contato> nomes= new ArrayList<Contato>();
+    ArrayList<contato> nomes = new ArrayList<contato>();
 
-    public Agenda(){
+    public agenda() {
 
     }
 
-    static public void adicionarNome(Contato x){
+    public void adicionarNome(contato x) {
         nomes.add(x);
     }
 
-    static public int numeroTotal(){
+    public int numeroTotal() {
         int b = nomes.size();
 
         return b;
     }
 
-    static public String exibirContato(String n) {
+    public String exibirContato(String n) {
         String saida = "";
-        for(Contato x : nomes){
-            if(x.getNome().equalsIgnoreCase(n)){
+        for (contato x : nomes) {
+            if (x.getNome().equals(n)) {
                 saida += x.imprimir() + "\n";
             }
         }
         return saida;
-     }
+    }
 
-     static public void excluirContato(String v){
-         for(Contato x : nomes){
-            if(x.getNome().equalsIgnoreCase(v)){
+    public void excluirContato(String v) {
+        for (contato x : nomes) {
+            if (x.getNome().equalsIgnoreCase(v)) {
                 nomes.remove(x);
             }
-         }
-     }
-
-     static public String exibirAll(){
-         String said ="";
-        for(Contato x : nomes){
-            said += x.imprimir() + "\n";
-            }
-            return said;
         }
+    }
 
- }
- 
+    public String exibirAll() {
+        String said = "";
+        for (contato x : nomes) {
+            said += x.imprimir() + "\n";
+        }
+        return said;
+    }
 
-    
+}

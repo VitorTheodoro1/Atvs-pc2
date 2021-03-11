@@ -9,14 +9,16 @@ package ExercAgenda;
 //import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Teste {
+public class teste {
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
         Scanner inputString = new Scanner(System.in);
 
-        Contato objContato;
+        //agenda agenda = new agenda();
+        novaAgenda novaAgenda = new novaAgenda();
+        contato objContato;
         String nome,email;
         int numero;
         int x;
@@ -37,42 +39,40 @@ public class Teste {
                 System.out.println("digite o email:");
                 email = inputString.nextLine();
 
-                objContato = new Contato(numero, nome, email);
+                objContato = new contato(numero, nome, email);
+                
 
-                Agenda.adicionarNome(objContato);
+                //agenda.adicionarNome(objContato);
+                novaAgenda.adicionarNome(nome,objContato);
+
                 break;
                 
                 case 2://numero total de contatos
-                System.out.println("O numero de livros listados e :");
-                System.out.println(Agenda.numeroTotal());
+                System.out.println("O numero de contatos listados e :");
+                System.out.println(novaAgenda.numeroTotal());
                 break;
 
                 case 3://Exibe um contato 
                 System.out.println("digite o nome para pesquisar:"); 
                 String ajd = inputString.nextLine();
-                System.out.println(Agenda.exibirContato(ajd));
+                System.out.println(novaAgenda.exibirContato(ajd));
                 //System.out.println(imprimir());
                 break;
 
                 case 4://excluir um contato
                 System.out.println("digite um contato para excluir");
                 String help = inputString.nextLine();
-                Agenda.excluirContato(help);
+                novaAgenda.excluirContato(help);
                 break;
 
                 case 5://exibe todos os contatos
-                System.out.println(Agenda.exibirAll());
+                System.out.println(novaAgenda.exibirAll());
                 break;
 
             }
         }
 
         while(x!=0);
-
-
-
-
-
 
 
 
