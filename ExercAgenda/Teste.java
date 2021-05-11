@@ -22,6 +22,7 @@ public class teste {
         String nome,email;
         int numero;
         int x;
+        String arq = "ppppp.txt";
 
         //Contato contato = new Contato();
         //Agenda agenda = new Agenda();
@@ -40,6 +41,15 @@ public class teste {
                 email = inputString.nextLine();
 
                 objContato = new contato(numero, nome, email);
+                String contato = nome + ";" + numero +";"+email;
+                
+                if(Arquivo.Write(arq,contato)){
+                    System.out.println("yyyyyyyyyyyyy");
+                }
+                else{
+                    System.out.println("ttttttttttt");
+                }
+            
                 
 
                 //agenda.adicionarNome(objContato);

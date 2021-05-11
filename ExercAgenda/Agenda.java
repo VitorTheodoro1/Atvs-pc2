@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class agenda {
 
     ArrayList<contato> nomes = new ArrayList<contato>();
+    //Arquivo salvar = new Arquivo();
+    String arq = "ppppp.txt";
 
     public agenda() {
 
@@ -12,6 +14,9 @@ public class agenda {
 
     public void adicionarNome(contato x) {
         nomes.add(x);
+        Arquivo.Write(arq,contato);
+        
+
     }
 
     public int numeroTotal() {
@@ -47,3 +52,4 @@ public class agenda {
     }
 
 }
+
